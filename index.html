@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap js</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top my-navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand fotonav" href="#"><img src="https://i.imgur.com/lEu8x55.jpg" alt="ja"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav my-fluid">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">O mnie</a></li>
+              <li><a href="#">Moje Hobby</a></li>
+              <li><a href="#">Jeszcze więcej</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="container my-carusel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active foto-carusel1">
+          <img src="https://static.pexels.com/photos/33102/bulldog-puppy-dog-pet.jpg" alt="dog">
+        </div>
+        <div class="item foto-carusel2">
+          <img src="https://static.pexels.com/photos/5363/apple-desk-laptop-macbook-pro.jpg" alt="mac">
+        </div>
+        <div class="item foto-carusel3">
+          <img src="https://static.pexels.com/photos/33242/cooking-ingredient-cuisine-kitchen.jpg" alt="cook">
+        </div>
+        <div class="item foto-carusel4">
+          <img src="https://static.pexels.com/photos/30469/pexels-photo-30469.jpg" alt="travel">
+        </div>
+        <div class="item foto-carusel5">
+          <img src="https://static.pexels.com/photos/21014/pexels-photo.jpg" alt="cars">
+        </div>
+      </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="container my-tabs">
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a data-toggle="tab" href="#home">O Mnie</a></li>
+      <li><a data-toggle="tab" href="#menu1">Moje Hobby</a></li>
+      <li><a data-toggle="tab" href="#menu2">Jeszcze więcej</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="home" class="tab-pane fade in active">
+        <h3>O Mnie</h3>
+        <p>Mam 33 lata, od niespełna 2 lat mieszkamy razem z żoną i naszym pieskiem w Warszawie. Pochodzę z Nowego Sącza, gdzie się wychowałem i uczyłem. Po liceum przeprowadziłem się do Krakowa, gdzie ukończyłem studia na Politechnice Krakowskiej. Przez kolejne lata pracowałem jako handlowiec w branży samochodowej, a od kwietnia 2010r. jestem Przedstawicielem Medycznym.</p>
+      </div>
+      <div id="menu1" class="tab-pane fade">
+        <h3>Moje hobby</h3>
+        <p>Hobbby trudna sprawa, bo jest kilka zainteresowań, które można traktować jako hobby. Motoryzacja zwłaszcza lat 90-tych to jest temat mi bardzo bliski i bardzo dla mnie interesujący. Bardzo lubie podróżować i najchętniej do Chorwacji. Lubię też gotować zwłaszcza z pomocą Thermomixa</p>
+      </div>
+      <div id="menu2" class="tab-pane fade">
+        <h3>Jeszcze więcej</h3>
+        <p>Jestem osobą bardzo kontaktową, całe życie zawodowe spędziłem pracując z ludźmi głównie jako handlowiec. Aktualnie moim zawodowym celem jest przebranżowienie do roli front-end developera, co realizuję uczestnicząc w bootcampie.
+        I co najciekawsze naprawdę mi się to podoba ! :)</p>
+      </div>
+    </div>
+  </div>
+  <div class="container my-modal text-center">
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Wejdź
+    </button>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Ważna Treść</h4>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sequi, hic iure, laboriosam in sapiente obcaecati distinctio fuga. Nam in facilis facere quaerat repudiandae porro, dolore explicabo nisi atque nesciunt.</p>
+          </div>
+          <div class="modal-footer">
+            <p>Krótkie podsumowanie w stopce</p>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
