@@ -1,0 +1,617 @@
+=transition($transition)
+	-o-transition: $transition
+	-moz-transition: $transition
+	-webkit-transition: $transition
+	transition: $transition
+
+=transform($transform)
+	-moz-transform: $transform
+	-o-transform: $transform
+	-webkit-transform: $transform
+
+$tlo-stopka: #313332
+$tlo-naglowek: #313234
+$color-break: #00C3EF
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	padding: 0
+	font-family: 'Open Sans', sans-serif
+
+.row:before, .row:after
+	content: " "
+	display: table
+
+.row:after
+	clear: both
+
+.container
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+
+header
+	background-color: $tlo-naglowek
+	height: 50px
+		
+	> nav 
+		> img 
+			padding: 10px 0
+
+		> ul 
+			float: right
+			margin: 0
+			padding: 0
+			list-style-type: nonex
+			
+			> li 
+				display: inline-block
+
+				>a
+					line-height: 50px
+					padding: 0 20px
+					display: block
+					text-decoration: none
+					color: #fff
+					text-transform: uppercase
+					&:hover 
+						background: #ccc
+
+.hero 
+	background-image: url(https://static.pexels.com/photos/166/coffee-apple-iphone-laptop.jpg)
+	width: 100%
+	height: 100vh
+	padding-top: 42vh
+	box-sizing: border-box
+	text-align: center
+	background-size: cover
+	background-position: center
+	overflow: hidden
+
+.slogan 
+	color: #fff
+	background-color: rgba(49, 50, 51, 0.5)
+	float: right
+	max-width: 800px
+	font-size: 32px
+	font-weight: 500
+	margin-right: 20px
+
+.slog1
+	margin: 30px 50px
+	font-weight: lighter
+	text-transform: uppercase
+	text-align: left
+
+	
+[class*="col-"] 
+	float: left
+	min-height: 1px
+	height: auto
+	padding: 15px
+
+@for $i from 1 through 12
+
+	.col-#{$i}  
+		width: (100% / 12) * $i
+
+@for $i from 0 through 11
+	
+	.col-offset-#{$i}
+		margin-left: (100% / 12) * $i
+
+
+.left, .center, .right
+	text-align: center
+	display: inline-block
+
+.leftright
+	border: 6px solid #000
+	background-color: #000
+	transition: ease-in-out .3s
+	color: white
+	font-size: 100px
+	border-radius: 15px
+
+.left i 
+	@extend .leftright
+
+.center i 
+	border: 6px solid #00C7E8
+	background-color: #00C7E8
+	transition: ease-in-out .3s
+	color: white
+	font-size: 100px
+	border-radius: 15px
+
+.right i 
+	@extend .leftright
+
+.icon-column 
+	
+	h2  
+		text-transform: uppercase
+	p 
+		color: #AFAFAF
+		font-size: 18px
+		font-weight: lighter
+		line-height: 22px 
+
+.center h2 
+	color: #00C7E8
+
+.bottom-icon h1 
+	font-size: 34px
+	text-align: center
+	font-weight: bold
+	text-transform: uppercase
+
+.bottom-icon p
+	font-size: 20px
+	text-align: center
+	color: #AFAFAF
+	line-height: 22px
+
+.container-gallery 
+	width: 100%
+
+.image-gallery 
+	display: inline
+	padding: 0
+	position: relative
+	margin: 0
+	transition: 1s
+	overflow: hidden
+
+	img 
+		width: 100%
+		display: block
+
+.layer 
+	position: absolute
+	margin: 0
+	width: 100%
+	height: 100%
+	font-size: 30px
+	text-align: center
+	border: 0
+	top: 100%
+	color: #fff
+	transition: 1s
+
+.fa-ca, .fa-sh 
+	margin: 0 20px
+	cursor: pointer
+
+.image-gallery
+	&:hover 
+		opacity: 0.5	
+		transition: 1.5s
+
+		&:hover .layer 
+			display: inline-block
+			top: 50%
+			transition: ease-in-out 1s 
+
+.foto-column 
+	display: inline-block
+	text-align: center
+	font-size: 20px
+	margin: 100px 0
+
+.worker-foto 
+	border: 1px solid #E6E6E6
+	margin-top: 100px
+	border-radius: 50%	
+	transition: 1s
+	&:hover 
+		+transition(1s)
+		+transform(scale(1.2))
+		opacity: 0.5
+		cursor: pointer
+
+.bottom-container 
+	background-image: url(https://i.imgur.com/YUv865P.jpg)
+	width: 100%
+	height: 300px
+	padding-top: 70px
+	box-sizing: content-box
+	text-align: center
+	background-size: 80%
+	overflow: hidden
+	color: #fff
+	text-align: left
+	position: relative
+
+	h2 
+		text-transform: uppercase
+
+.tablet-foto 
+	position: absolute
+	display: block
+	height: 80%
+	max-width: 100%
+	bottom: 0px
+	margin: 0 50px
+
+.numbers 
+	margin: 100PX 0
+	display: inline-block
+	text-align: center
+	text-transform: uppercase
+
+	h1 
+		font-size: 45px
+		text-shadow: 1px 1px 1px #000
+
+	h3 
+		color: $color-break
+		text-shadow: 1px 1px 1px $color-break
+
+footer 
+	background-color: $tlo-stopka
+	color: #fff
+	text-align: center
+
+	p 
+		color: #A2A4A3
+	h1 
+		display: inline-block
+		position: relative
+		z-index: 1
+		background: $tlo-stopka
+		padding-right: 10px
+
+.copyright 
+	text-align: center
+	background-color: #252726
+
+.about-us, .get-in-touch, .social-media 
+	margin: 0 auto
+	padding: 5px
+	text-align: left
+
+.icon-btn 
+	margin: 10px
+	width: 50px
+	height: 50px
+	border: 0
+	color: #fff
+	background-color: $color-break
+	font-size: 30px
+	cursor: pointer
+ 
+.footline 
+	height: 8px
+	width: 80%
+	background: white
+	display: inline-block
+	position: relative
+	top: -50px
+
+@media screen and (min-width: 768px) and (max-width: 1199px) 
+
+	.foto-column 
+		display: inline-block
+		text-align: center
+		font-size: 20px
+		margin: 10px 0
+	
+		img 
+			width: 85%
+	
+	.worker-foto 
+		border: 1px solid #E6E6E6
+		margin-top: 50px
+		border-radius: 50%
+		&:hover 
+			+transition(1s)
+			+transform(scale(1.2))
+			opacity: 0.5
+			cursor: pointer
+	
+	.bottom-container 
+		background-image: url(https://i.imgur.com/YUv865P.jpg)
+		width: 100%
+		height: 300px
+		padding-top: 0px
+		box-sizing: content-box
+		text-align: center
+		background-size: 80%
+		overflow: hidden
+		color: #fff
+		text-align: left
+		position: relative
+
+		h2 
+			text-transform: uppercase
+			font-size: 22px
+	
+		p 
+			font-size: 14px
+	
+	.tablet-foto 
+		position: absolute
+		display: block
+		height: 70%
+		max-width: 100%
+		bottom: 0px
+		margin: 0 10px
+	
+	.numbers 
+		margin: 80PX 0
+		display: inline-block
+		text-align: center
+		text-transform: uppercase
+	
+		h1 
+			font-size: 40px
+			text-shadow: 1px 1px 1px #000
+	
+		h3 
+			color: $color-break
+			text-shadow: 1px 1px 1px $color-break
+	
+
+@media screen and (min-width: 768px) 
+	@for $i from 1 through 12
+		.col-m-#{$i}
+			width: (100% / 12) * $i
+
+@media screen and (max-width: 767px) 
+	.container 
+		width: 100%
+		max-width: 767px
+		margin: 0 auto
+	
+	header 
+		background-color: $tlo-naglowek
+		height: 300px
+		text-align: center
+	
+	header
+		> nav 
+			> img 
+				padding: 10px 0
+	
+			> ul 
+				float: none
+				margin: 0
+				padding: 0
+				list-style-type: none
+	
+				> li 
+					display: block
+	
+					> a 
+						line-height: 40px
+						padding: 0 15px
+						display: block
+						text-decoration: none
+						color: #fff
+						text-transform: uppercase
+						:hover 
+							background: #ccc
+	
+	.hero 
+		background-image: url(https://static.pexels.com/photos/166/coffee-apple-iphone-laptop.jpg)
+		width: 100%
+		height: 100%
+		padding-top: 42vh
+		box-sizing: border-box
+		text-align: center
+		background-size: cover
+		background-position: center
+		overflow: hidden
+	
+	.slogan 
+		color: #fff
+		background-color: rgba(49, 50, 51, 0.5)
+		float: right
+		max-width: 500px
+		font-size: 22px
+		font-weight: 300
+	
+	.slog1
+		margin: 20px 40px
+		font-weight: lighter
+		text-transform: uppercase
+		text-align: left
+	
+	@for $i from 1 through 12
+		.col-s-#{$i}
+			width: (100% / 12) * $i
+	
+	.left, .center, .right
+		text-align: center
+		display: inline-block
+
+	.leftright-sm
+		border: 6px solid #000
+		background-color: #000
+		transition: ease-in-out .3s
+		color: white
+		font-size: 80px
+		border-radius: 15px
+
+	.left i 
+		@extend .leftright-sm
+
+	.center i 
+		border: 6px solid #00C7E8
+		background-color: #00C7E8
+		transition: ease-in-out .3s
+		color: white
+		font-size: 80px
+		border-radius: 15px
+
+	.right i 
+		@extend .leftright-sm
+
+	.icon-column 
+		h2  
+			text-transform: uppercase 
+			font-size: 20px
+		p 
+			color: #AFAFAF
+			font-size: 18px
+			font-weight: lighter
+			line-height: 24px
+	
+	.center h2 
+		color: #00C7E8
+	
+	.bottom-icon 
+		h1 
+			font-size: 18px
+			text-align: center
+			font-weight: bold
+			text-transform: uppercase
+	
+		p
+			font-size: 16px
+			text-align: center
+			color: #AFAFAF
+			line-height: 16px
+	
+	.container-gallery 
+		width: 100%
+	
+	.image-gallery 
+		display: inline
+		width: 100%
+		padding: 0
+		position: relative
+		margin: 0 auto
+		overflow: hidden
+		transition: 0
+		&:hover 
+			opacity: 1	
+			transition: 1.5s
+	
+		img 
+			text-align: center
+	
+	.layer 
+		position: absolute
+		margin: 0
+		width: 100%
+		height: 100%
+		font-size: 30px
+		text-align: center
+		border: 0
+		top: 50%
+		color: #fff
+	
+	.fa-ca, .fa-sh 
+		margin: 0 20px
+		cursor: pointer
+	
+	.foto-column 
+		display: inline-block
+		text-align: center
+		font-size: 20px
+		margin: 10px 0
+	
+		img 
+			width: 50%
+	
+	.worker-foto 
+		border: 1px solid #E6E6E6
+		margin-top: 50px
+		border-radius: 50%	
+		&:hover 
+			+transition(0)
+			+transform(scale(1))
+			opacity: 1
+			cursor: pointer
+	
+	.bottom-container 
+		background-image: url(https://i.imgur.com/YUv865P.jpg)
+		width: 100%
+		height: 300px
+		padding-top: 0px
+		box-sizing: content-box
+		text-align: center
+		background-size: 80%
+		overflow: hidden
+		color: #fff
+		text-align: left
+		position: relative
+
+		h2 
+			text-transform: uppercase
+			font-size: 18px
+	
+		p 
+			font-size: 12px
+	
+	.tablet-foto 
+		position: absolute
+		display: inline-block
+		height: 25vw
+		max-width: 100%
+		bottom: 0px
+		margin: 0 5px
+	
+	.numbers 
+		margin: 40PX 0
+		display: inline-block
+		text-align: center
+		text-transform: uppercase
+	
+		h1 
+			font-size: 36px
+			text-shadow: 1px 1px 1px #000
+	
+		h3 
+			font-size: 18px
+			color: $color-break
+			text-shadow: 1px 1px 1px $color-break
+	
+	footer 
+		background-color: $tlo-stopka
+		color: #fff
+		text-align: center
+		overflow: hidden
+	
+		p 
+			color: #A2A4A3
+		h1 
+			display: inline-block
+			position: relative
+			background: $tlo-stopka
+	
+	.copyright 
+		text-align: center
+		background-color: #252726
+	
+	.about-us, .get-in-touch, .social-media 
+		margin: 0 auto
+		padding: 5px
+		text-align: center
+	
+	.get-in-touch 
+		width: 100%
+	
+	.icon-btn 
+		display: inline-block
+		margin: 10px auto
+		width: 65px
+		height: 65px
+		border: 0
+		color: #fff
+		background-color: $color-break
+		font-size: 35px
+		cursor: pointer
+	
+	.footline 
+		height: 0px
+		width: 100%
+		background: white
+		display: inline-block
+		position: relative
+		top: -100%
